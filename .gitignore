@@ -160,4 +160,4 @@ cython_debug/
 #.idea/
 
 # Configuration
-*.yml
+applicant_names.yml

@@ -11,7 +11,7 @@ from datetime import datetime
 import yaml
 
 from flask import Flask, render_template, request, redirect, url_for
-from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap5
 from flask_wtf import FlaskForm
 from wtforms import StringField, DateField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, URL
@@ -27,7 +27,7 @@ APPLICANT_NAMES = applicant_names_data['applicant_names']
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'your_secret_key')
-bootstrap = Bootstrap(app)
+bootstrap = Bootstrap5(app)
 
 # MongoDB connection
 mongo_uri = os.environ.get('MONGO_URI')

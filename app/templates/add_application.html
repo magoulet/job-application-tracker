@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% import "bootstrap/wtf.html" as wtf %}
+{% import "bootstrap/form.html" as wtf %}
 
 {% block content %}
 <div class="container">
-    <h1>{% if form.submit.label.text == 'Submit' %}Add{% else %}Edit{% endif %} Job Application</h1>
+    <h1>Add Job Application</h1>
     <form method="post">
-        {{ wtf.quick_form(form) }}
+        {{ wtf.render_form(form) }}
     </form>
 </div>
 {% endblock %}

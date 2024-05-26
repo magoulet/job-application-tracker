@@ -19,6 +19,7 @@ class ApplicationForm(FlaskForm):
         applicant_name (SelectField): The name of the applicant.
         industry (StringField): The industry of the job.
         company (StringField): The company the application was submitted to.
+        position (StringField): Title of the position applied to.
         location (StringField): The location of the job.
         job_description_link (StringField): The URL of the job description.
         resume_link (StringField): The URL of the applicant's resume.
@@ -33,6 +34,7 @@ class ApplicationForm(FlaskForm):
     applicant_name = SelectField('Applicant Name', validators=[DataRequired()], choices=[])
     industry = StringField('Industry')
     company = StringField('Company', validators=[DataRequired()])
+    position = StringField('Position', validators=[DataRequired()])
     location = StringField('Location')
     job_description_link = StringField('Job Description Link', validators=[Optional(), URL()])
     resume_link = StringField('Resume Link', validators=[Optional(), URL()])

@@ -13,7 +13,10 @@
         <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
         <script>
             $(document).ready(function() {
-                $('table').DataTable();
+                $('table').DataTable({
+                    "pageLength": 50, // Set default number of rows to 50
+                    "order": [[0, "desc"]] // Sort by date applied in descending order
+                });
             });
         </script>
 
